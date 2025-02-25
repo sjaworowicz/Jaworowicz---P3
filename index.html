@@ -36,26 +36,21 @@
 
 	      <div class="row">
 
-	        <div class="col-md-6">
+	        <div class="col-md-6" v-for="(movie, index) in movies">
 	            <div class="thumbnail">
 
-						<img class="poster img-fluid" />
-						<div class="imageInfo">{{ posterindex }}</div>
+						<img v-bind:src="movies[index].posters[0]" class="poster img-fluid" />
+						<div class="imageInfo">{{ movies[index].posterIndex }}</div>
 
-						<p class="title">{{ title }} ({{ country }})</p>
-						<p class="score"><i class="bi bi-star" aria-hidden="true"></i> {{ iscore }} </p>
-						<p class="runtime">Runtime: {{ runtime }}</p>
-						<p class="released">Released: {{ released }} | Rated: {{ rating }}</p>
-						<p class="websites">Websites: <a> imdb </a> | <a>website</a></p>
-
-						<ul>
-							<li v-for="(movies, index) in arr">
-							</li>
-						  </ul>
+						<p class="title">{{ movies[index].title }} ({{ movies[index].country }})</p>
+						<p class="score"><i class="bi bi-star" aria-hidden="true"></i> {{ movies[index].iscore }} </p>
+						<p class="runtime">Runtime: {{ movies[index].runtime }}</p>
+						<p class="released">Released: {{ movies[index].released }} | Rated: {{ movies[index].rating }}</p>
+						<p class="websites">Websites: <a v-bind:href="movies[0].imdb"> IMDB </a> | <a v-bind:href="movies[0].website"> Official </a></p>
 
 			            <div class="social">
-			              <p class="likes"><i class="bi bi-hand-thumbs-up" aria-hidden="true"></i> {{ likes }}</p>
-			              <p class="dislikes"><i class="bi bi-hand-thumbs-down"></i> {{ dislikes }}</p>
+			              <p class="likes"><i class="bi bi-hand-thumbs-up" aria-hidden="true"></i> {{ movies[index].likes }}</p>
+			              <p class="dislikes"><i class="bi bi-hand-thumbs-down"></i> {{ movies[index].dislikes }}</p>
 			            </div>
 	            </div>
 	        </div>
@@ -65,8 +60,8 @@
 
 	    <div class="footer">
 	      <div class="container">
-			<a id="github" class="btn btn-lg btn-warning">
-				<i class="bi bi-github me-2"></i>{{ github }}
+			<a id="github" class="btn btn-lg btn-warning" v-bind:href="github">
+				<i class="bi bi-github me-2"></i> {{ owner }}
 	  		</a>
 	      </div>
 	    </div>
