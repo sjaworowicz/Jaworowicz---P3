@@ -45,11 +45,11 @@
 						<p class="title">{{ movies[index].title }} ({{ movies[index].country }})</p>
 						<p class="score"><i class="bi bi-star" aria-hidden="true"></i> {{ movies[index].iscore }} </p>
 						<p class="runtime">Runtime: {{ movies[index].runtime }}</p>
-						<p class="released">Released: {{ movies[index].released }} | Rated: {{ movies[index].rating }}</p>
+						<p class="released">Released: {{ getMonthText(movies[index].released) }} | Rated: {{ movies[index].rating }}</p>
 						<p class="websites">Websites: <a v-bind:href="movies[0].imdb"> IMDB </a> | <a v-bind:href="movies[0].website"> Official </a></p>
 
 			            <div class="social">
-			              <p class="likes"><i class="bi bi-hand-thumbs-up" aria-hidden="true"></i> {{ movies[index].likes }}</p>
+			              <p @click="likeIncrement()" class="likes"><i class="bi bi-hand-thumbs-up" aria-hidden="true"></i> {{ movies[index].likes }}</p>
 			              <p class="dislikes"><i class="bi bi-hand-thumbs-down"></i> {{ movies[index].dislikes }}</p>
 			            </div>
 	            </div>
