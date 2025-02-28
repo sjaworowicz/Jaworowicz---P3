@@ -49,8 +49,8 @@
 						<p class="websites">Websites: <a v-bind:href="movies[0].imdb"> IMDB </a> | <a v-bind:href="movies[0].website"> Official </a></p>
 
 			            <div class="social">
-			              <p @click="likeIncrement()" class="likes"><i class="bi bi-hand-thumbs-up" aria-hidden="true"></i> {{ movies[index].likes }}</p>
-			              <p class="dislikes"><i class="bi bi-hand-thumbs-down"></i> {{ movies[index].dislikes }}</p>
+			              <p @click.once="movies[index].likes++" class="likes"><i class="bi bi-hand-thumbs-up" aria-hidden="true"></i> {{ movies[index].likes }}</p>
+			              <p @click.once="movies[index].dislikes++" class="dislikes"><i class="bi bi-hand-thumbs-down"></i> {{ movies[index].dislikes }}</p>
 			            </div>
 	            </div>
 	        </div>

@@ -82,11 +82,17 @@ const vue_app = Vue.createApp({
             };
             return month + " " + dateArray[2] + ", " + dateArray[0];
             },
-            likeIncrement(count) {
-              count++
-              console.log();
+            posterClick(index) {
+              this.posterIndex = (this.posterIndex + 1)% this.movies[index].posters[0]
             }
+      },
+      computed: {
+        currentObject() {
+          return this.movies[index].posters[this.index];
+        }
       }
+
+
 })
 
 vue_app.mount("#vue_app")
