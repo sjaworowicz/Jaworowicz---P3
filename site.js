@@ -83,12 +83,28 @@ const vue_app = Vue.createApp({
             return month + " " + dateArray[2] + ", " + dateArray[0];
             },
             posterClick(index) {
-              this.posterIndex = (this.posterIndex + 1)% this.movies[index].posters[0]
-            }
-      },
+              this.movies[index].posterindex++
+
+              if(this.movies[index].posterindex >= this.movies[index].posters.length) {
+                this.movies[index].posterindex = 0;
+                return this.movies[index].posterindex;
+              };
+
+              if(this.movies[index].posterindex < 0) {
+                this.movies[index].posterindex = 0;
+                return this.movies[index].posterindex;
+              };
+            },
+            timeText(minutes) {
+              timeAsDecimal = minutes / 60;
+              hours = Math.trunc(timeAsDecimal);
+              remainingMinutes = minutes - hours + 60;
+              return hours + "h " + remainingMinutes + "m";
+              }
+            },
       computed: {
         currentObject() {
-          return this.movies[index].posters[this.index];
+          return this.movies[index].posters[this.index[index].posterindex];
         }
       }
 

@@ -68,5 +68,47 @@
             "likes": 812,
             "dislikes": 101,
             "posterindex": 0
+      },
+      {
+            "title": "Interstellar",
+            "iscore": 8.7,
+            "rating": "PG-13",
+            "runtime": 169,
+            "released": [2014, 10, 26],
+            "country": "USA",
+            "posters": ["img/interstellar-1.jpg", "img/interstellar-2.jpg"],
+            "imdb": "https://www.imdb.com/title/tt0816692/",
+            "website": "https://www.facebook.com/InterstellarUK/",
+            "likes": 1200,
+            "dislikes": 250,
+            "posterindex": 0
+      },
+      {
+            "title": "The Dark Knight Rises",
+            "iscore": 8.4,
+            "rating": "PG-13",
+            "runtime": 162,
+            "released": [2012, 7, 16],
+            "country": "USA",
+            "posters": ["img/dark-knight-rises-1.jpg", "img/dark-knight-rises-2.jpg"],
+            "imdb": "https://www.imdb.com/title/tt1345836/?ref_=hm_tpks_i_16_pd_tp1_pbr_ic",
+            "website": "https://www.facebook.com/darknightrises/",
+            "likes": 1100,
+            "dislikes": 125,
+            "posterindex": 0
+      },
+      {
+            "title": "Oppenheimer",
+            "iscore": 8.3,
+            "rating": "R",
+            "runtime": 180,
+            "released": [2023, 7, 17],
+            "country": "USA",
+            "posters": ["img/oppenheimer-1.jpg", "img/oppenheimer-2.jpg"],
+            "imdb": "https://www.imdb.com/title/tt15398776/?ref_=hm_tpks_i_5_pd_tp1_pbr_ic",
+            "website": "https://www.facebook.com/OppenheimerMovie/",
+            "likes": 2000,
+            "dislikes": 200,
+            "posterindex": 0
       }
 ]

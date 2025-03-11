@@ -39,8 +39,8 @@
 	        <div class="col-md-6" v-for="(movie, index) in movies">
 	            <div class="thumbnail">
 
-						<img v-bind:src="movies[index].posters[0]" class="poster img-fluid" />
-						<div class="imageInfo">{{ movies[index].posterIndex }}</div>
+						<img @click="posterClick(index)" :src="movies[index].posters[movie.posterindex]" class="poster img-fluid" />
+						<div class="imageInfo">Poster {{ movies[index].posterindex + 1 }} out of {{ movies[index].posters.length }}</div>
 
 						<p class="title">{{ movies[index].title }} ({{ movies[index].country }})</p>
 						<p class="score"><i class="bi bi-star" aria-hidden="true"></i> {{ movies[index].iscore }} </p>
